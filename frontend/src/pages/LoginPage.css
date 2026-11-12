@@ -110,3 +110,25 @@
 .signup-text a:hover {
   text-decoration: underline;
 } 
+.password-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.password-field input {
+  flex: 1;
+  min-width: 0;
+}
+
+.password-field button {
+  width: auto;
+  padding: 12px;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.password-field button:hover {
+  background-color: #d1d5db;
+}

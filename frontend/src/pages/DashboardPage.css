@@ -1,0 +1,341 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f6fb;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar */
+
+.dashboard-sidebar {
+  width: 250px;
+  background: #ffffff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e5e7eb;
+}
+
+.dashboard-sidebar h2 {
+  color: #2563eb;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.dashboard-sidebar nav p,
+.sidebar-bottom p {
+  padding: 14px;
+  margin: 8px 0;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.dashboard-sidebar nav p:hover,
+.sidebar-bottom p:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.dashboard-sidebar nav .active {
+  background: #2563eb;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+/* Main Content */
+
+.dashboard-main {
+  flex: 1;
+  padding: 35px;
+  min-width: 0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #64748b;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  color: #334155;
+}
+
+/* Storage Card */
+
+.storage-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.storage-card h3 {
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.storage-card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.storage-info {
+  width: 250px;
+}
+
+.storage-bar {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.storage-used {
+  width: 25%;
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+/* Dashboard Actions */
+
+.dashboard-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-actions h2 {
+  font-size: 24px;
+  color: #111827;
+}
+
+.upload-button {
+  background: #2563eb;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.upload-button:hover {
+  background: #1d4ed8;
+}
+
+/* File List */
+
+.file-list {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.file-list-header,
+.file-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 18px 25px;
+  gap: 10px;
+}
+
+.file-list-header {
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.file-row {
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+
+.file-row:hover {
+  background: #f8fafc;
+}
+
+.file-row > span:first-child {
+  overflow-wrap: anywhere;
+}
+
+/* File Action Icons */
+
+.file-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.file-actions button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+/* View Button */
+
+.view-button {
+  background: #dbeafe;
+  color: #1683ff;
+  border: 1px solid #a5ccff;
+}
+
+.view-button:hover {
+  background: #bfdbfe;
+}
+
+/* Download Button */
+
+.download-button {
+  background: #fff7d6;
+  color: #e99a00;
+  border: 1px solid #f5df91;
+}
+
+.download-button:hover {
+  background: #ffefb0;
+}
+
+/* Delete Button */
+
+.delete-button {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 0;
+}
+
+.delete-button:hover {
+  background: #fecaca;
+}
+
+/* Empty Files */
+
+.empty-files {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+}
+
+/* Logout Button */
+
+.sidebar-bottom button {
+  width: 100%;
+  padding: 14px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar-bottom button:hover {
+  background: #fecaca;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    width: 180px;
+    padding: 20px 10px;
+  }
+
+  .dashboard-main {
+    padding: 20px;
+  }
+
+  .dashboard-header {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .storage-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .storage-info {
+    width: 100%;
+  }
+
+  .file-list-header,
+  .file-row {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .file-actions {
+    gap: 5px;
+  }
+
+  .file-actions button {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+}
+/* Login Page Alignment */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Global Body */
+body {
+  margin: 0;
+}
